@@ -55,6 +55,7 @@ p {
     width: 100%;
     margin-bottom: 3em;
     display: table;
+    /*background-image: image-url("bio.jpg");*/
 }
 
 .banner-head {
