@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   resources :bios
+  # resources :laboratories
+  get 'laboratories' => 'laboratories#index'
+  get 'jobs' => 'jobs#index'
+  get 'contents' => 'contents#index'
+  get 'informations' => 'informations#index'
+  get 'links' => 'links#index'
   root 'bios#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

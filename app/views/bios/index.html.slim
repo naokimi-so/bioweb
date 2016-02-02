@@ -3,18 +3,39 @@
     =image_tag("icons3/Primary.png")
   ul.pure-menu-list
     li.pure-menu-item
-      a.pure-menu-link href="#"  研究室
+      =link_to('研究室' , laboratories_path , :class => 'pure-menu-link')
     li.pure-menu-item
-      a.pure-menu-link href="#"  情報交換
+      =link_to('情報交換' , informations_path , :class => 'pure-menu-link')
     li.pure-menu-item
-      a.pure-menu-link href="#" 就職
-    li.pure-menu-item
-      a.pure-menu-link href="#"  コンテンツ
-    li.pure-menu-item
-      a.pure-menu-link href="#"  リンク
-button.pure-button.pure-button-primary.sign
-  | sign in
-
+      =link_to('就職' , jobs_path , :class => 'pure-menu-link')
+    li.pure-menu-item.pure-menu-has-children.pure-menu-allow-hover
+      =link_to('コンテンツ' , contents_path , :class => 'pure-menu-link')
+      ul.pure-menu-children
+        li.pure-menu-item
+          =link_to('温度、湿度測定', {} , :class => 'pure-menu-link')
+        li.pure-menu-item
+          =link_to('脈拍の測定', {} ,:class => 'pure-menu-link')
+        li.pure-menu-item.pure-menu-disabled
+          =link_to('coming soon..', {}, :class => 'pure-menu-link')
+    li.pure-menu-item.pure-menu-has-children.pure-menu-allow-hover
+      =link_to('リンク' , links_path , :class => 'pure-menu-link')
+      ul.pure-menu-children
+        li.pure-menu-item
+          =link_to('moodle', 'http://mi.el.kyutech.ac.jp/course/index.php?categoryid=8' , :class => 'pure-menu-link')
+        li.pure-menu-item
+          =link_to('livecampus', 'https://virginia.jimu.kyutech.ac.jp/portal/init.do?userDivision=2&locale=ja' ,:class => 'pure-menu-link')
+        li.pure-menu-item
+          =link_to('オンラインガイド', 'https://onlineguide.isc.kyutech.ac.jp/guide2015/', :class => 'pure-menu-link')      
+=button_to('sign in' , {:action => 'index'} , :class => 'pure-button pure-button-primary sign')
+        / 
+        / <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+        /     <a href="#" id="menuLink1" class="pure-menu-link">Contact</a>
+        /     <ul class="pure-menu-children">
+        /         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Email</a></li>
+        /         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        /         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tumblr Blog</a></li>
+        /     </ul>
+        / </li>
 
 .banner
   .banner-transparent
