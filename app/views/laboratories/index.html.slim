@@ -1,24 +1,106 @@
-h1 研究室紹介ページ
-
-h2 教授
-p 青木研究室
-p 入佐研究室
-p 安永研究室
-p 矢田研究室
-p 西郷研究室
-p 大内研究室
-p 山崎研究室
-p 坂本（寛）研究室
-p 坂本（順）研究室
-p 前田研究室
-p 竹本研究室
-p 中川研究室
-p 引間研究室
-p 倉田研究室
-h2 助教
-p 小松研究室
-p 平研究室
-p 大澤研究室
-p 藤井研究室
-
-=link_to('トップへ戻る',bios_path)
+#layout
+  /! Menu toggle
+  a#menuLink.menu-link href="#menu" 
+    /! Hamburger icon
+    span
+  #menu
+    .pure-menu
+      li.pure-menu-heading 研究室紹介
+      ul.pure-menu-list
+        li.pure-menu-item#drop
+          p 教授
+          ul.child.pure-menu-list
+            li.pure-menu-item
+              a.pure-menu-link 安永研究室
+            li.pure-menu-item
+              a.pure-menu-link 矢田研究室
+            li.pure-menu-item
+              a.pure-menu-link 山崎研究室
+            li.pure-menu-item  
+              a.pure-menu-link 坂本（寛）研究室
+            li.pure-menu-item
+              a.pure-menu-link 坂本（順）研究室
+            li.pure-menu-item
+              a.pure-menu-link 前田研究室
+            li.pure-menu-item
+              a.pure-menu-link 中川研究室
+            li.pure-menu-item
+              a.pure-menu-link 引間研究室
+            li.pure-menu-item
+              a.pure-menu-link 倉田研究室
+        li.pure-menu-item#drop2
+          p 准教授
+          ul.child.pure-menu-list
+            li.pure-menu-item
+              a.pure-menu-link 青木研究室
+            li.pure-menu-item
+              a.pure-menu-link 入佐研究室
+            li.pure-menu-item
+              a.pure-menu-link 大内研究室
+            li.pure-menu-item
+              a.pure-menu-link 西郷研究室
+            li.pure-menu-item
+              a.pure-menu-link 竹本研究室
+        li.pure-menu-item#drop3
+          p 助教授
+          ul.child.pure-menu-list
+            li.pure-menu-item
+              a.pure-menu-link 小松研究室
+            li.pure-menu-item
+              a.pure-menu-link 平研究室
+            li.pure-menu-item
+              a.pure-menu-link 大澤研究
+            li.pure-menu-item
+              a.pure-menu-link 藤井研究室
+  #main
+    #top.header
+      h1 研究室の紹介ページ
+      h2 これは研究室の紹介ページです。
+    .content
+      h2#profile.content-subhead プロフィール
+      ul
+      li 名前
+      p 島井　尚輝
+      li 出身
+      p 福岡県　糟屋郡　宇美町
+      li 大学
+      p 九州工業大学　情報工学部　生命情報工学科　3年　矢田研究室
+      li 研究
+      p ゲノム情報を可視化してブラウザ上に表示させるWebアプリケーション開発
+      li 趣味
+      p 音楽　卓球　バドミントン　ビリヤード　プログラミング
+      li 得意な技術
+      p Webのフロントエンド(HTML , CSS , JavaScript)
+      li 興味のある技術
+      p Rails , Redis , AWS , CoffeeScript , Compass , React.js , AnglarJS , Sass , Underscore.js , Backbone.js , gulp , chef , grunt , PhotoShop , Illustrator , Node.js
+      li 好きな言葉
+      p 出過ぎた杭は打たれない。武器は走りながら拾え。
+      h2#Bio-Z.content-subhead Bio-Z
+      p
+        | Bio-Zとは当学科内でプログラミング、アプリ開発を行っている団体です。僕が2016年の代表をしていて、現時点の活動としてはWeb制作の基礎知識をつけてもらうために当学科の学部1年から3年を対象にしてWeb開発講習会を行っています。Bio-Zの活動は生命の学科内のプログラミングスキルの向上が目的で、現メンバーが活躍して少しでも多くの人に知ってもらってこれから先Bio-Zに加入する人が増えていけばいいなと思っています。
+      br/
+      .pure-g
+        .pure-u-1-2
+          =image_tag("Bio-Z/f.jpg" , :class => 'pure-img-responsive')
+        .pure-u-1-2
+          =image_tag("Bio-Z/e.jpg" , :class => 'pure-img-responsive')
+        .pure-u-1-2
+          =image_tag("Bio-Z/b.jpg" , :class => 'pure-img-responsive')
+        .pure-u-1-2
+          =image_tag("Bio-Z/h.jpg" , :class => 'pure-img-responsive')
+      h2#Yada_lab.content-subhead 矢田研究室
+      p
+        | 矢田研究室では主にバイオインフォマティクスの研究を行っています。
+      p
+        | 僕の研究テーマは「
+        strong ゲノム情報を可視化してブラウザ上に表示させるWebアプリケーション開発
+        | 」です。
+      p
+        strong キーワード
+        p ゲノム ゲノム生物学 アノテーション 遺伝子 プロモーター 遺伝子発見 配列解析 機械学習 発現制御 合成生物学 アルゴリズム ヒト アラインメント 転写制御
+      .pure-g
+        .pure-u-1-2
+          =image_tag("Yada_lab/o.jpg" , :class => 'pure-img-responsive')
+        .pure-u-1-2
+          =image_tag("Yada_lab/m.jpg" , :class => 'pure-img-responsive')
+          =image_tag("Yada_lab/n.jpg" , :class => 'pure-img-responsive')
