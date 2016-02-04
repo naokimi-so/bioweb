@@ -15,13 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= require ui
-
-// $(function(){
-//   $(window).on('scroll',function(){
-//     if($(this).scrollTop()){
-//       $('nav').addClass('fixed');
-//     } else {
-//       $('.header').removeClass('fixed');
-//     }
-//   });
-// });

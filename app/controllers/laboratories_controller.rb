@@ -1,5 +1,5 @@
 class LaboratoriesController < ApplicationController
   def index
-    @bios = Bio.all
+    @professors = Professor.all
   end
 end

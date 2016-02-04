@@ -10,24 +10,29 @@
         li.pure-menu-item.drop-menu
           p 教授
           ul.child.pure-menu-list
-            li.pure-menu-item
-              a.pure-menu-link 安永研究室
-            li.pure-menu-item
-              a.pure-menu-link 矢田研究室
-            li.pure-menu-item
-              a.pure-menu-link 山崎研究室
-            li.pure-menu-item  
-              a.pure-menu-link 坂本（寛）研究室
-            li.pure-menu-item
-              a.pure-menu-link 坂本（順）研究室
-            li.pure-menu-item
-              a.pure-menu-link 前田研究室
-            li.pure-menu-item
-              a.pure-menu-link 中川研究室
-            li.pure-menu-item
-              a.pure-menu-link 引間研究室
-            li.pure-menu-item
-              a.pure-menu-link 倉田研究室
+          
+            = @professors.each do |professor|
+              li.pure-menu-item
+              a.pure-menu-link "#{professor.name}研究室"
+            
+            / li.pure-menu-item
+            /   a.pure-menu-link 安永研究室
+            / li.pure-menu-item
+            /   a.pure-menu-link 矢田研究室
+            / li.pure-menu-item
+            /   a.pure-menu-link 山崎研究室
+            / li.pure-menu-item  
+            /   a.pure-menu-link 坂本（寛）研究室
+            / li.pure-menu-item
+            /   a.pure-menu-link 坂本（順）研究室
+            / li.pure-menu-item
+            /   a.pure-menu-link 前田研究室
+            / li.pure-menu-item
+            /   a.pure-menu-link 中川研究室
+            / li.pure-menu-item
+            /   a.pure-menu-link 引間研究室
+            / li.pure-menu-item
+            /   a.pure-menu-link 倉田研究室
         li.pure-menu-item.drop-menu
           p 准教授
           ul.child.pure-menu-list
