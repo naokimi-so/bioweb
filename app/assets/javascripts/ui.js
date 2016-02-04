@@ -34,39 +34,10 @@
 
 }(this, this.document));
 
-
-//わっかんねええええええええええええええええええええええええ
-// $(function(){
-//   $('#drop').hover(function(){
-//     $('ul.child').removeClass('up');
-//     console.log('up');
-//     $('ul.child').addClass('down');
-//     console.log('down');
-//   }, function(){
-//     $('ul.child').removeClass('down');
-//     console.log('down2');
-//     $('ul.child').addClass('up');
-//     console.log('up2');
-//   });
-//   $('ul.down').slideDown();
-//   $('ul.up').slideUp();
-// });
-
-//↓　くそコード　修正の必要あり　重い
+//↓　修正の必要あり　重い
 
 $(function(){
-    $('ul.child').slideUp();
-    $('#drop').hover(function(){
-        $("ul:not(:animated)", this).slideDown();
-    }, function(){
-        $("ul.child",this).slideUp();
-    });
-    $('#drop2').hover(function(){
-        $("ul:not(:animated)", this).slideDown();
-    }, function(){
-        $("ul.child",this).slideUp();
-    });
-    $('#drop3').hover(function(){
+    $(".drop-menu").hover(function() {
         $("ul:not(:animated)", this).slideDown();
     }, function(){
         $("ul.child",this).slideUp();

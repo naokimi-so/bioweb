@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'laboratories' => 'laboratories#index'
   get 'jobs' => 'jobs#index'
   get 'contents' => 'contents#index'
-  get 'informations' => 'informations#index'
+  get 'kakomons' => 'kakomons#index'
   get 'links' => 'links#index'
   root 'bios#index'
   # The priority is based upon order of creation: first created -> highest priority.
