@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
+
   resources :bios
+  # resources :laboratories
+  get 'laboratories' => 'laboratories#index'
+  get 'jobs' => 'jobs#index'
+  get 'contents' => 'contents#index'
+  get 'kakomons' => 'kakomons#index'
+  get 'links' => 'links#index'
+  get 'signup' =>'users#new'
   root 'bios#index'
+
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

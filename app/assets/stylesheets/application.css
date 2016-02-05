@@ -14,40 +14,13 @@
  *= require_self
  *= require purecss
  */
-/*
- html{
-   height:100%;
-   width:100%;
- }
 
- body {
-   margin: 0;
-   padding: 0;
- }
-
- li{
-   padding: 5px;
-   border: solid 2px #333;
-   margin: 5px 0px 5px 30px;
-   list-style: none;
-   float:left;
- }
-header{
-  background-color: red;
-  height: 75px;
-  width: 100%;
-  text-align: center;
-}
- nav{
-  background-color: #FFAADD;
-  height: 75px;
+.sign{
   position: absolute;
-  top:100px;
-  width: 100%;
- }
+  top: 28px;
+  right: 50px;
+}
 
- .fixed{
-  background-color: orange;
-  position: fixed;
-  margin-top: -75px
- }*/
+.drop-menu ul {
+  display: none;
+}
