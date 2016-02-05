@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160127063640) do
+ActiveRecord::Schema.define(version: 20160203111907) do
 
   create_table "bios", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "professors", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

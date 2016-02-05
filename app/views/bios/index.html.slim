@@ -1,0 +1,71 @@
+.pure-menu.pure-menu-horizontal
+  a.pure-menu-heading href="./"
+    =image_tag("icons3/Primary.png")
+  ul.pure-menu-list
+    li.pure-menu-item
+      =link_to('sign up' , signup_path , :class => 'pure-menu-link')
+    li.pure-menu-item
+      =link_to('研究室' , laboratories_path , :class => 'pure-menu-link')
+    li.pure-menu-item
+      =link_to('過去問道場' , kakomons_path , :class => 'pure-menu-link')
+    li.pure-menu-item
+      =link_to('就職' , jobs_path , :class => 'pure-menu-link')
+    li.pure-menu-item.pure-menu-has-children.pure-menu-allow-hover
+      =link_to('コンテンツ' , contents_path , :class => 'pure-menu-link')
+      ul.pure-menu-children
+        li.pure-menu-item
+          =link_to('温度、湿度測定', {} , :class => 'pure-menu-link')
+        li.pure-menu-item
+          =link_to('脈拍の測定', {} ,:class => 'pure-menu-link')
+        li.pure-menu-item.pure-menu-disabled
+          =link_to('coming soon..', {}, :class => 'pure-menu-link')
+    li.pure-menu-item.pure-menu-has-children.pure-menu-allow-hover
+      =link_to('リンク' , links_path , :class => 'pure-menu-link')
+      ul.pure-menu-children
+        li.pure-menu-item
+          =link_to('moodle', 'http://mi.el.kyutech.ac.jp/course/index.php?categoryid=8' , :class => 'pure-menu-link')
+        li.pure-menu-item
+          =link_to('livecampus', 'https://virginia.jimu.kyutech.ac.jp/portal/init.do?userDivision=2&locale=ja' ,:class => 'pure-menu-link')
+        li.pure-menu-item
+          =link_to('オンラインガイド', 'https://onlineguide.isc.kyutech.ac.jp/guide2015/', :class => 'pure-menu-link')
+=button_to('sign in' , {:action => 'index'} , :class => 'pure-button pure-button-primary sign')
+        /
+        / <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+        /     <a href="#" id="menuLink1" class="pure-menu-link">Contact</a>
+        /     <ul class="pure-menu-children">
+        /         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Email</a></li>
+        /         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        /         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tumblr Blog</a></li>
+        /     </ul>
+        / </li>
+
+.banner
+  .banner-transparent
+    h1.banner-head
+      | BioのBio-Zによる
+      br/
+      | BioのためのWebアプリ
+.l-content
+  .information.pure-g
+    .pure-u-1
+      .l-box
+        h3.information-head News & Topics
+        p
+          | 12月25日　南立くんが無事出産しました。（test）
+        p
+          | 1月5日　　南立くんが東京刑務所へ連行されました。　(test)
+        p
+          | 1月26日　 南立くんが脱獄しました。(test)
+    .pure-u-1
+      .l-box
+        h3.information-head あなたへのお知らせ
+        p
+          | 3月14日までに奨学金の書類を提出してください。
+    .pure-u-1
+      .l-box
+        h3.information-head メモ
+        p
+          |まだありません。
+.footer.l-box
+  address
+    | &copy 2016 created by Bio-Z We部　
