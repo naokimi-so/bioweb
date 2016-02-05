@@ -5,6 +5,6 @@ class BiosController < ApplicationController
   end
 
   def new
-    
+    render :template => "users/show"
   end
 end

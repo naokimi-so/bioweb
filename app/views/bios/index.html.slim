@@ -3,8 +3,6 @@
     =image_tag("icons3/Primary.png")
   ul.pure-menu-list
     li.pure-menu-item
-      =link_to('sign up' , signup_path , :class => 'pure-menu-link')
-    li.pure-menu-item
       =link_to('研究室' , laboratories_path , :class => 'pure-menu-link')
     li.pure-menu-item
       =link_to('過去問道場' , kakomons_path , :class => 'pure-menu-link')
@@ -28,16 +26,7 @@
           =link_to('livecampus', 'https://virginia.jimu.kyutech.ac.jp/portal/init.do?userDivision=2&locale=ja' ,:class => 'pure-menu-link')
         li.pure-menu-item
           =link_to('オンラインガイド', 'https://onlineguide.isc.kyutech.ac.jp/guide2015/', :class => 'pure-menu-link')
-=button_to('sign in' , {:action => 'index'} , :class => 'pure-button pure-button-primary sign')
-        /
-        / <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-        /     <a href="#" id="menuLink1" class="pure-menu-link">Contact</a>
-        /     <ul class="pure-menu-children">
-        /         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Email</a></li>
-        /         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
-        /         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tumblr Blog</a></li>
-        /     </ul>
-        / </li>
+=link_to('sign up' , signup_path, :class => 'pure-button pure-button-primary sign')
 
 .banner
   .banner-transparent
