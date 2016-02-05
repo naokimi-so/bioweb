@@ -11,9 +11,9 @@
           p 教授
           ul.child.pure-menu-list
           
-            = @professors.each do |professor|
+            - @professors.each do |professor|
               li.pure-menu-item
-              a.pure-menu-link "#{professor.name}研究室"
+              a.pure-menu-link #{professor.name}研究室
             
             / li.pure-menu-item
             /   a.pure-menu-link 安永研究室
