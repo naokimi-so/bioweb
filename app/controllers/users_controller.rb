@@ -5,6 +5,9 @@ class UsersController < ApplicationController
 
   def new
     @user=User.new
+    # @user.name = 'Username'
+    # @user.email = 'Email Address'
+    # @user.password = 'Password'
   end
 
   def create
