@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   resources :bios
   # resources :laboratories
   resources :laboratories
@@ -8,6 +10,9 @@ Rails.application.routes.draw do
   get 'kakomons' => 'kakomons#index'
   get 'links' => 'links#index'
   get 'signup' =>'users#new'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   root 'bios#index'
 
   resources :users

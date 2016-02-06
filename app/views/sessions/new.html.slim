@@ -1,0 +1,17 @@
+-provide(:title, "Log in")
+h1 
+  | Log in
+.pure-form.pure-form-aligned
+  =form_for(:session, url: login_path) do |f|
+    fieldset
+      .pure-control-group
+        =f.label :email
+        =f.email_field :email , :placeholder => 'Email Address'
+      .pure-control-group
+        = f.label :password
+        = f.password_field :password  , :placeholder => 'password'
+      p 
+        | New user? 
+        =link_to("Sign up now!", signup_path)
+      .pure-controls
+        = f.submit "Log in",:class => "pure-button pure-button-primary"  
