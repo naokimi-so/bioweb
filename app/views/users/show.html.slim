@@ -1,1 +1,3 @@
-=render :template => "bios/index"
+- provide(:title, @user.name)
+
+h1 ようこそ#{@user.name}さん^ ^

@@ -28,4 +28,7 @@
           =link_to('livecampus', 'https://virginia.jimu.kyutech.ac.jp/portal/init.do?userDivision=2&locale=ja' ,:class => 'pure-menu-link')
         li.pure-menu-item
           =link_to('オンラインガイド', 'https://onlineguide.isc.kyutech.ac.jp/guide2015/', :class => 'pure-menu-link')
-=link_to('sign up' , signup_path, :class => 'pure-button pure-button-primary sign')
+-if logged_in?
+  =link_to('Log in' , login_path, :class => 'pure-button pure-button-primary sign')
+-else
+  =link_to('Log out' , logout_path, :method => delete , :class => 'pure-button pure-button-primary sign')
