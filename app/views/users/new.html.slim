@@ -1,3 +1,4 @@
+=render 'header'
 .pure-form.pure-form-aligned
   =form_for(@user) do |f|
     fieldset
@@ -15,23 +16,3 @@
         =f.password_field :password_confirmation , :placeholder => 'Please type one more'
       .pure-controls
         =f.submit("新規作成",:class => "pure-button pure-button-primary")
-/ 
-/ form.pure-form.pure-form-aligned
-/   fieldset
-/     .pure-control-group
-/       label for="name"  Username
-/       input#name placeholder="Username" type="text" /
-/     .pure-control-group
-/       label for="password"  Password
-/       input#password placeholder="Password" type="password" /
-/     .pure-control-group
-/       label for="email"  Email Address
-/       input#email placeholder=("Email Address") type="email" /
-/     .pure-control-group
-/       label for="foo"  Supercalifragilistic Label
-/       input#foo placeholder=("Enter something here...") type="text" /
-/     .pure-controls
-/       label.pure-checkbox for="cb" 
-/         input#cb type="checkbox" /
-/         | I've read the terms and conditions
-/       button.pure-button.pure-button-primary type="submit"  Submit

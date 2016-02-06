@@ -1,35 +1,4 @@
-.pure-menu.pure-menu-horizontal
-  a.pure-menu-heading href="./"
-    =image_tag("icons3/Primary.png")
-  ul.pure-menu-list
-    li.pure-menu-item
-      =link_to('研究室' , laboratories_path , :class => 'pure-menu-link')
-    li.pure-menu-item
-      =link_to('過去問道場' , kakomons_path , :class => 'pure-menu-link')
-    li.pure-menu-item
-      =link_to('就職' , jobs_path , :class => 'pure-menu-link')
-    li.pure-menu-item.pure-menu-has-children.pure-menu-allow-hover
-      p.pure-menu-link
-       | コンテンツ
-      ul.pure-menu-children
-        li.pure-menu-item
-          =link_to('温度、湿度測定', {} , :class => 'pure-menu-link')
-        li.pure-menu-item
-          =link_to('脈拍の測定', {} ,:class => 'pure-menu-link')
-        li.pure-menu-item.pure-menu-disabled
-          =link_to('coming soon..', {}, :class => 'pure-menu-link')
-    li.pure-menu-item.pure-menu-has-children.pure-menu-allow-hover
-      p.pure-menu-link
-        | リンク
-      ul.pure-menu-children
-        li.pure-menu-item
-          =link_to('moodle', 'http://mi.el.kyutech.ac.jp/course/index.php?categoryid=8' , :class => 'pure-menu-link')
-        li.pure-menu-item
-          =link_to('livecampus', 'https://virginia.jimu.kyutech.ac.jp/portal/init.do?userDivision=2&locale=ja' ,:class => 'pure-menu-link')
-        li.pure-menu-item
-          =link_to('オンラインガイド', 'https://onlineguide.isc.kyutech.ac.jp/guide2015/', :class => 'pure-menu-link')
-=link_to('sign up' , signup_path, :class => 'pure-button pure-button-primary sign')
-
+=render 'header'
 .banner
   .banner-transparent
     h1.banner-head
@@ -55,8 +24,21 @@
     .pure-u-1
       .l-box
         h3.information-head メモ
+        ul#ideaList
+        textarea#idea cols="100" rows="8" style="width:600px;height:150px;" 
         p
-          |まだありません。
-.footer.l-box
-  address
-    | &copy 2016 created by Bio-Z We部　
+          input#submit.pure-button type="button" value="投稿" /
+          input#delete.pure-button type="button" value="削除" /
+
+        
+  /   <h2>アイディア</h2>
+  /   <ul id="ideaList"></ul>
+  / </section>
+  / <h2>投稿フォーム</h2>
+  /   <textarea id="idea" rows="8" cols="100" style="width:600px;height:150px;"></textarea>
+  /   <p>
+  /     <input type="button" id="submit" value="投稿">
+  /     <input type="button" id="delete" value="削除">
+  /   </p>
+        
+=render 'footer'
