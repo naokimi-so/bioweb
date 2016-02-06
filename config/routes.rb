@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :bios
   # resources :laboratories
-  get 'laboratories' => 'laboratories#index'
+  resources :laboratories
   get 'jobs' => 'jobs#index'
   get 'contents' => 'contents#index'
   get 'kakomons' => 'kakomons#index'

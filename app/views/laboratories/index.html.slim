@@ -10,53 +10,25 @@
         li.pure-menu-item.drop-menu
           p 教授
           ul.child.pure-menu-list
-          
             - @professors.each do |professor|
-              li.pure-menu-item
-              a.pure-menu-link #{professor.name}研究室
-            
-            / li.pure-menu-item
-            /   a.pure-menu-link 安永研究室
-            / li.pure-menu-item
-            /   a.pure-menu-link 矢田研究室
-            / li.pure-menu-item
-            /   a.pure-menu-link 山崎研究室
-            / li.pure-menu-item  
-            /   a.pure-menu-link 坂本（寛）研究室
-            / li.pure-menu-item
-            /   a.pure-menu-link 坂本（順）研究室
-            / li.pure-menu-item
-            /   a.pure-menu-link 前田研究室
-            / li.pure-menu-item
-            /   a.pure-menu-link 中川研究室
-            / li.pure-menu-item
-            /   a.pure-menu-link 引間研究室
-            / li.pure-menu-item
-            /   a.pure-menu-link 倉田研究室
+              - if professor.category == 1
+                li.pure-menu-item
+                =link_to("#{professor.name}研究室" , laboratory_path(professor.id), :class => 'pure-menu-link')
         li.pure-menu-item.drop-menu
           p 准教授
           ul.child.pure-menu-list
-            li.pure-menu-item
-              a.pure-menu-link 青木研究室
-            li.pure-menu-item
-              a.pure-menu-link 入佐研究室
-            li.pure-menu-item
-              a.pure-menu-link 大内研究室
-            li.pure-menu-item
-              a.pure-menu-link 西郷研究室
-            li.pure-menu-item
-              a.pure-menu-link 竹本研究室
+            - @professors.each do |professor|
+              - if professor.category ==2
+                li.pure-menu-item
+                =link_to("#{professor.name}研究室" , laboratory_path(professor.id), :class => 'pure-menu-link')
+
         li.pure-menu-item.drop-menu
           p 助教授
           ul.child.pure-menu-list
-            li.pure-menu-item
-              a.pure-menu-link 小松研究室
-            li.pure-menu-item
-              a.pure-menu-link 平研究室
-            li.pure-menu-item
-              a.pure-menu-link 大澤研究
-            li.pure-menu-item
-              a.pure-menu-link 藤井研究室
+            - @professors.each do |professor|
+              - if professor.category ==3
+                li.pure-menu-item
+                =link_to("#{professor.name}研究室" , laboratory_path(professor.id), :class => 'pure-menu-link')
   #main
     #top.header
       h1 研究室の紹介ページ
@@ -64,22 +36,22 @@
     .content
       h2#profile.content-subhead プロフィール
       ul
-      li 名前
-      p 島井　尚輝
-      li 出身
-      p 福岡県　糟屋郡　宇美町
-      li 大学
-      p 九州工業大学　情報工学部　生命情報工学科　3年　矢田研究室
-      li 研究
-      p ゲノム情報を可視化してブラウザ上に表示させるWebアプリケーション開発
-      li 趣味
-      p 音楽　卓球　バドミントン　ビリヤード　プログラミング
-      li 得意な技術
-      p Webのフロントエンド(HTML , CSS , JavaScript)
-      li 興味のある技術
-      p Rails , Redis , AWS , CoffeeScript , Compass , React.js , AnglarJS , Sass , Underscore.js , Backbone.js , gulp , chef , grunt , PhotoShop , Illustrator , Node.js
-      li 好きな言葉
-      p 出過ぎた杭は打たれない。武器は走りながら拾え。
+        li 名前
+        p 島井　尚輝
+        li 出身
+        p 福岡県　糟屋郡　宇美町
+        li 大学
+        p 九州工業大学　情報工学部　生命情報工学科　3年　矢田研究室
+        li 研究
+        p ゲノム情報を可視化してブラウザ上に表示させるWebアプリケーション開発
+        li 趣味
+        p 音楽　卓球　バドミントン　ビリヤード　プログラミング
+        li 得意な技術
+        p Webのフロントエンド(HTML , CSS , JavaScript)
+        li 興味のある技術
+        p Rails , Redis , AWS , CoffeeScript , Compass , React.js , AnglarJS , Sass , Underscore.js , Backbone.js , gulp , chef , grunt , PhotoShop , Illustrator , Node.js
+        li 好きな言葉
+        p 出過ぎた杭は打たれない。武器は走りながら拾え。
       h2#Bio-Z.content-subhead Bio-Z
       p
         | Bio-Zとは当学科内でプログラミング、アプリ開発を行っている団体です。僕が2016年の代表をしていて、現時点の活動としてはWeb制作の基礎知識をつけてもらうために当学科の学部1年から3年を対象にしてWeb開発講習会を行っています。Bio-Zの活動は生命の学科内のプログラミングスキルの向上が目的で、現メンバーが活躍して少しでも多くの人に知ってもらってこれから先Bio-Zに加入する人が増えていけばいいなと思っています。

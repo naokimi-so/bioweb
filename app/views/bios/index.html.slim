@@ -9,7 +9,8 @@
     li.pure-menu-item
       =link_to('就職' , jobs_path , :class => 'pure-menu-link')
     li.pure-menu-item.pure-menu-has-children.pure-menu-allow-hover
-      =link_to('コンテンツ' , contents_path , :class => 'pure-menu-link')
+      p.pure-menu-link
+       | コンテンツ
       ul.pure-menu-children
         li.pure-menu-item
           =link_to('温度、湿度測定', {} , :class => 'pure-menu-link')
@@ -18,7 +19,8 @@
         li.pure-menu-item.pure-menu-disabled
           =link_to('coming soon..', {}, :class => 'pure-menu-link')
     li.pure-menu-item.pure-menu-has-children.pure-menu-allow-hover
-      =link_to('リンク' , links_path , :class => 'pure-menu-link')
+      p.pure-menu-link
+        | リンク
       ul.pure-menu-children
         li.pure-menu-item
           =link_to('moodle', 'http://mi.el.kyutech.ac.jp/course/index.php?categoryid=8' , :class => 'pure-menu-link')
