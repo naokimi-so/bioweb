@@ -1,6 +1,38 @@
 - provide(:title, @user.name)
 
-h1 ようこそ#{@user.name}さん^ ^
+/ h1 ようこそ#{@user.name}さん^ ^
 
-.center
-  = link_to "Go to BioWeb!!", { :controller => "bios", :action => "index" }, { :class => "pure-button pure-button-primary size" } 
+/ .center
+/   = link_to "Go to BioWeb!!", { :controller => "bios", :action => "index" }, { :class => "pure-button pure-button-primary size" } 
+
+=render 'header'
+.banner
+  .banner-transparent
+    h1.banner-head
+      | ようこそ#{@user.name}さん^ ^
+.l-content
+  .information.pure-g
+    .pure-u-1
+      .l-box
+        h3.information-head News & Topics
+        p
+          | 12月25日　南立くんが無事出産しました。（test）
+        p
+          | 1月5日　　南立くんが東京刑務所へ連行されました。　(test)
+        p
+          | 1月26日　 南立くんが脱獄しました。(test)
+    .pure-u-1
+      .l-box
+        h3.information-head あなたへのお知らせ
+        p
+          | 3月14日までに奨学金の書類を提出してください。
+    .pure-u-1
+      .l-box
+        h3.information-head メモ
+        ul#ideaList
+        textarea#idea cols="100" rows="8" style="width:600px;height:150px;" 
+        p
+          input#submit.pure-button type="button" value="投稿" /
+          input#delete.pure-button type="button" value="削除" /
+
+=render 'footer'
