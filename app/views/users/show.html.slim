@@ -1,3 +1,6 @@
 - provide(:title, @user.name)
 
 h1 ようこそ#{@user.name}さん^ ^
+
+.center
+  = link_to "Go to BioWeb!!", { :controller => "bios", :action => "index" }, { :class => "pure-button pure-button-primary size" } 
